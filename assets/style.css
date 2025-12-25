@@ -27,7 +27,7 @@ body{margin:0;font-family:"Yu Gothic","YuGothic","Yu Gothic UI","Hiragino Kaku G
 
 /* リンクの下線を消す（必要条件）
    - color:inherit で文字色を本文と揃える */
-.nav a{text-decoration:none;color:inherit}
+.nav a{text-decoration:none;color:inherit;font-weight:600}
 
 
 
