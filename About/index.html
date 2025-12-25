@@ -1,104 +1,86 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <!-- 文字化け防止。日本語サイトはUTF-8で統一 -->
+  <!-- 文字化け防止（UTF-8で日本語を正しく扱う） -->
   <meta charset="utf-8">
-
   <!-- スマホ表示の基本設定 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- ページ固有のtitle（検索結果やタブ表示に効く） -->
+  <!-- タブに表示されるタイトル -->
   <title>About | Atelier YAMORI</title>
 
-  <!-- 共通CSSを読み込む（Aboutは1階層下なので ../ を付ける） -->
+  <!-- Google Fonts（日本語が崩れにくい） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- 共通CSS（Aboutは1階層下なので ../ ） -->
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 
 <body>
-  <!-- 全ページ共通のヘッダー（ここを揃えるとサイト全体が整う） -->
+  <!-- 共通ヘッダー（サイト名＋ナビ） -->
   <header class="site-header">
-    <div class="wrap">
-      <!-- ロゴ兼サイト名。クリックでトップへ戻る -->
+    <div class="wrap header-row">
+      <!-- トップへ戻るリンク -->
       <a class="brand" href="../">Atelier YAMORI</a>
 
-      <!-- ナビ。現在地のページだけ aria-current="page" を付ける -->
+      <!-- グローバルナビ -->
       <nav class="nav" aria-label="Global navigation">
-        <a href="../">Top</a>
-        <a href="./" aria-current="page">About</a>
-        <a href="../Works/">Works</a>
-        <a href="../Texts/">Texts</a>
-        <a href="../Favorites/">Favorites</a>
-        <a href="../Contact/">Contact</a>
+        <a href="../about/" class="is-current" aria-current="page">About</a>
+        <a href="../works/">Works</a>
+        <a href="../diary/">Diary</a>
+        <a href="../favorites/">Favorites</a>
+        <a href="../contact/">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- このページの本文 -->
-  <main class="wrap">
-    <!-- ページ見出し（h1は1ページに基本1つ） -->
-    <h1>About</h1>
+  <main class="wrap page">
+    <!-- ページ見出し -->
+    <h1 class="page-title">About</h1>
 
-    <!-- 略歴（写真＋紹介文） -->
-    <section aria-labelledby="bio-title">
-      <h2 id="bio-title">略歴</h2>
+    <!-- ページ内リンク（目次）。ここを「略歴→フィロソフィー→年表」から差し替え -->
+    <nav class="page-nav" aria-label="About sections">
+      <a href="#atelier-yamori">Atelier YAMORI</a>
+      <a href="#profile">Profile</a>
+      <a href="#dream">Dream</a>
+      <a href="#chronicle">自筆年譜</a>
+    </nav>
 
-      <!-- 写真とキャプションをまとめる。写真ファイルは自分の実ファイル名に合わせて変更 -->
-      <figure>
-        <!-- 例: ../assets/img/profile.jpg を置いた場合。存在しないと画像が出ないので注意 -->
-        <img src="../assets/img/profile.jpg" alt="舟木健太郎のポートレート" width="640" height="640">
-        <figcaption>Photo: 自分で撮ったやつ、または友人に撮ってもらったやつ</figcaption>
-      </figure>
+    <!-- ② 新規追加：Atelier YAMORI -->
+    <section id="atelier-yamori" class="section">
+      <h2>Atelier YAMORI</h2>
 
-      <!-- ここは「ふざける」ゾーン。数百文字くらいを想定 -->
+      <!-- ここは頂いた文章をそのまま入れています。末尾が途中で切れていたので、続きは差し替えてください -->
       <p>
-        舟木健太郎。1999年4月7日生まれ。
-      </p>
-
-      <!-- 連絡先や拠点など、必要ならここに追記 -->
-      <!-- <p>拠点: 兵庫。活動: 建築、写真、文章。</p> -->
-    </section>
-
-    <!-- フィロソフィー（真剣） -->
-    <section aria-labelledby="philosophy-title">
-      <h2 id="philosophy-title">フィロソフィー</h2>
-
-      <!-- 数百字くらいを想定 -->
-      <p>
-        生きねばならない。
+        2022年、大学3年生の夏休みに、前期に非常勤で教えてもらった鄭先生にもっと教えて貰いたいと思い、いるか設計集団のインターンに1ヶ月参加する。そこではじめて、プロの図面を見て感銘を受ける。図面の右下には、屋号であるいるか設計集団が英語で「Atelier IRUKA」が印字されており、そのカッコよさに完全に喰らってしまった僕はまず自分の設計事務所の屋号をつくることにする。象設計集団(Atelier ZO)、いるか設計集団…
       </p>
     </section>
 
-    <!-- 年表 -->
-    <section aria-labelledby="timeline-title">
-      <h2 id="timeline-title">年表</h2>
+    <!-- ① 置換：略歴 → Profile -->
+    <section id="profile" class="section">
+      <h2>Profile</h2>
+      <!-- ここに既存の「略歴」本文を移してください -->
+      <p><!-- 例：経歴テキスト --></p>
+    </section>
 
-      <!-- 年表は「箇条書き」にしておくと増やしやすい -->
+    <!-- ① 置換：フィロソフィー → Dream -->
+    <section id="dream" class="section">
+      <h2>Dream</h2>
+      <!-- ここに既存の「フィロソフィー」本文を移してください -->
+      <p><!-- 例：ステートメント等 --></p>
+    </section>
+
+    <!-- ① 置換：年表 → 自筆年譜 -->
+    <section id="chronicle" class="section">
+      <h2>自筆年譜</h2>
+      <!-- ここに既存の「年表」内容を移してください（ul/li や table でもOK） -->
       <ul>
-        <!-- 必要に応じて追加していく -->
-        <li>
-          <strong>1999年（0歳）</strong><br>
-          4月7日。母・舟木素子、父・高松一郎のもとに生まれる。体重3990グラム。
-          予定日は4/2であったため、当時からどんくさかったようである。
-          予定日を過ぎていたためか、既に頭髪が生えていた。
-          この日へその緒を切られた瞬間から、人生の困難がスタートする。（それはみんな同じ）
-        </li>
-
-        <!-- 追加例（テンプレ）。この形で増やすだけでOK -->
-        <!--
-        <li>
-          <strong>2018年（19歳）</strong><br>
-          ここに出来事を書く。
-        </li>
-        -->
+        <li><!-- YYYY - 出来事 --></li>
       </ul>
     </section>
   </main>
 
-  <!-- フッター（必要なら） -->
-  <!--
-  <footer class="wrap">
-    <small>© Atelier YAMORI</small>
-  </footer>
-  -->
+  <!-- 共通フッターがある場合はここに -->
 </body>
 </html>
