@@ -10,6 +10,11 @@
   <!-- ブラウザのタブに表示されるタイトル -->
   <title>Atelier YAMORI</title>
 
+  <!-- Google Fonts（日本語が文字化けしにくいフォントを読み込む） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet">
+
   <!-- 見た目（フォント含む）はCSS側で一括管理する -->
   <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -35,5 +40,14 @@
 
     </div>
   </header>
+
+  <!-- ここからメイン内容（ヘッダーの下に表示される領域） -->
+  <main>
+    <!-- ロゴ表示エリア（中央寄せ＋高さを確保して“画面いっぱい”感を出す） -->
+    <section class="top-logo" aria-label="Logo">
+      <!-- 画像パスは index.html から見た相対パス（assets/img/ なのでこの書き方でOK） -->
+      <img class="top-logo-img" src="assets/img/yamorilogo_black.png" alt="Atelier YAMORI ロゴ">
+    </section>
+  </main>
 </body>
 </html>
