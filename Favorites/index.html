@@ -10,8 +10,23 @@
   <!-- ページ固有のtitle -->
   <title>Favorites | Atelier YAMORI</title>
 
+  <!-- 日本語表示が安定するGoogle Fonts（サイト全体で使う想定） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
   <!-- 共通CSS（Favoritesは1階層下なので ../ を付ける） -->
   <link rel="stylesheet" href="../assets/style.css">
+
+  <!-- このページだけの微調整（共通CSSを汚さない） -->
+  <style>
+    /* 日本語隠れ解説：リストの「・」(箇条書きの点) を消して、左のズレも消す */
+    .fav-list{list-style:none;padding:0;margin:0}
+    /* 日本語隠れ解説：各項目の間に少しだけ余白 */
+    .fav-list li{margin:0 0 14px}
+    /* 日本語隠れ解説：名前は太字にする */
+    .fav-name{font-weight:700}
+  </style>
 </head>
 
 <body>
@@ -24,11 +39,11 @@
       <!-- ナビ（現在地のページだけ aria-current="page"） -->
       <nav class="nav" aria-label="Global navigation">
         <a href="../">Top</a>
-        <a href="../about/">About</a>
-        <a href="../works/">Works</a>
-        <a href="../texts/">Texts</a>
+        <a href="../About/">About</a>
+        <a href="../Works/">Works</a>
+        <a href="../Texts/">Texts</a>
         <a href="./" aria-current="page">Favorites</a>
-        <a href="../contact/">Contact</a>
+        <a href="../Contact/">Contact</a>
       </nav>
     </div>
   </header>
@@ -39,24 +54,46 @@
     <h1>Favorites</h1>
 
     <!-- あいうえお順（読みを意識して並べる。追加するときもこの順で） -->
-    <ul>
+    <ul class="fav-list">
       <!-- ASKA（読み：あすか） -->
-      <li>ASKA：<a href="https://www.fellows.tokyo/" target="_blank" rel="noopener">https://www.fellows.tokyo/</a></li>
+      <li>
+        <span class="fav-name">ASKA</span>
+        <br><!-- 日本語隠れ解説：名前とURLの間を改行する -->
+        <a href="https://www.fellows.tokyo/" target="_blank" rel="noopener">https://www.fellows.tokyo/</a>
+      </li>
 
       <!-- CHAGE & ASKA（読み：ちゃげ あんど あすか） -->
-      <li>CHAGE &amp; ASKA：<a href="https://www.chage-aska.net/" target="_blank" rel="noopener">https://www.chage-aska.net/</a></li>
+      <li>
+        <span class="fav-name">CHAGE &amp; ASKA</span>
+        <br><!-- 日本語隠れ解説：名前とURLの間を改行する -->
+        <a href="https://www.chage-aska.net/" target="_blank" rel="noopener">https://www.chage-aska.net/</a>
+      </li>
 
       <!-- 阪神タイガース（読み：はんしん たいがーす） -->
-      <li>阪神タイガース：<a href="https://hanshintigers.jp/" target="_blank" rel="noopener">https://hanshintigers.jp/</a></li>
+      <li>
+        <span class="fav-name">阪神タイガース</span>
+        <br><!-- 日本語隠れ解説：名前とURLの間を改行する -->
+        <a href="https://hanshintigers.jp/" target="_blank" rel="noopener">https://hanshintigers.jp/</a>
+      </li>
 
       <!-- まど・みちお（読み：まど みちお） -->
-      <li>まど・みちお：<a href="https://www.iwanami.co.jp/book/b287521.html" target="_blank" rel="noopener">https://www.iwanami.co.jp/book/b287521.html</a></li>
+      <li>
+        <span class="fav-name">まど・みちお</span>
+        <br><!-- 日本語隠れ解説：名前とURLの間を改行する -->
+        <a href="https://www.iwanami.co.jp/book/b287521.html" target="_blank" rel="noopener">https://www.iwanami.co.jp/book/b287521.html</a>
+      </li>
 
       <!-- Louis I. Kahn（読み：るいす あい かーん） -->
-      <li>Louis I. Kahn</li>
+      <li><span class="fav-name">Louis I. Kahn</span></li>
 
       <!-- ここから下に追加していく（あいうえお順で挿入） -->
-      <!-- <li>〇〇：<a href="https://example.com/" target="_blank" rel="noopener">https://example.com/</a></li> -->
+      <!--
+      <li>
+        <span class="fav-name">〇〇</span>
+        <br>
+        <a href="https://example.com/" target="_blank" rel="noopener">https://example.com/</a>
+      </li>
+      -->
     </ul>
   </main>
 </body>
