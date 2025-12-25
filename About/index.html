@@ -12,6 +12,19 @@
 
   <!-- 共通CSSを読み込む（Aboutは1階層下なので ../ を付ける） -->
   <link rel="stylesheet" href="../assets/style.css">
+
+  <style>
+  /* ここから下は「Aboutページの本文」の余白調整です（他ページには影響しにくい） */
+
+  /* section+section は「直前にも section がある section」だけを選ぶ書き方です。
+     つまり「各セクションの2つ目以降」にだけ上の余白が入ります。
+     → これで「Atelier YAMORI と 舟木健太郎」の間など、セクション同士の間隔だけが広がります。 */
+  main.wrap section+section{margin-top:3rem;}
+
+  /* 余白の量を変えたいときは 3rem の数字だけ変更します。
+     例：2rem（少し）/ 4rem（大きく）/ 5rem（かなり大きく） */
+</style>
+
 </head>
 
 <body>
@@ -41,7 +54,7 @@
     <!-- 1) Atelier YAMORI -->
     <section>
       <h2>Atelier YAMORI</h2>
-      <p>2021年に舟木健太郎が設立した架空の設計事務所。ロゴだけが存在している。</p>
+      <p>2021年に舟木健太郎が設立した架空の設計事務所。ロゴだけが存在している。構成員は舟木のみ。門戸は開いているが、</p>
     </section>
 
     <!-- 2) Kentaro FUNAKI -->
