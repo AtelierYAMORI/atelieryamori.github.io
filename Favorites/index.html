@@ -3,14 +3,12 @@
 <head>
   <!-- 文字化け防止（UTF-8で統一） -->
   <meta charset="utf-8">
-
   <!-- スマホ表示の基本設定 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!-- ページ固有のtitle -->
   <title>Favorites | Atelier YAMORI</title>
 
-  <!-- 日本語表示が安定するGoogle Fonts（サイト全体で使う想定） -->
+  <!-- 日本語表示が安定するGoogle Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
@@ -18,25 +16,23 @@
   <!-- 共通CSS（Favoritesは1階層下なので ../ を付ける） -->
   <link rel="stylesheet" href="../assets/style.css">
 
-  <!-- このページだけの微調整（共通CSSを汚さない） -->
   <style>
-    /* 日本語隠れ解説：リストの「・」(箇条書きの点) を消して、左のズレも消す */
+    /* リストの点（・）と左のインデントを消して、h1と文頭を揃える */
     .fav-list{list-style:none;padding:0;margin:0}
-    /* 日本語隠れ解説：各項目の間に少しだけ余白 */
+    /* 各項目の間に少し余白 */
     .fav-list li{margin:0 0 14px}
-    /* 日本語隠れ解説：名前は太字にする */
+    /* 名前は太字にする */
     .fav-name{font-weight:700}
+    /* (空白) を表現するための「空行」 */
+    .fav-gap{height:14px;margin:0;padding:0}
   </style>
 </head>
 
 <body>
-  <!-- 共通ヘッダー（サイト名＋ナビ） -->
   <header class="site-header">
     <div class="wrap">
-      <!-- サイト名（トップへ戻るリンク） -->
       <p class="site-title"><a class="brand" href="../">Atelier YAMORI</a></p>
 
-      <!-- ナビ（現在地のページだけ aria-current="page"） -->
       <nav class="nav" aria-label="Global navigation">
         <a href="../">Top</a>
         <a href="../About/">About</a>
@@ -48,52 +44,60 @@
     </div>
   </header>
 
-  <!-- 本文 -->
   <main class="wrap">
-    <!-- ページ見出し（このページの主役） -->
     <h1>Favorites</h1>
 
-    <!-- あいうえお順（読みを意識して並べる。追加するときもこの順で） -->
+    <!-- あいうえお音順 -->
     <ul class="fav-list">
-      <!-- ASKA（読み：あすか） -->
       <li>
         <span class="fav-name">ASKA</span>
-        <br><!-- 日本語隠れ解説：名前とURLの間を改行する -->
+        <br>
         <a href="https://www.fellows.tokyo/" target="_blank" rel="noopener">https://www.fellows.tokyo/</a>
       </li>
 
-      <!-- CHAGE & ASKA（読み：ちゃげ あんど あすか） -->
+      <li>
+        <span class="fav-name">岡本太郎</span>
+        <br>
+        <a href="https://www.taromuseum.jp/" target="_blank" rel="noopener">https://www.taromuseum.jp/</a>
+      </li>
+
+      <li><span class="fav-name">シロ</span></li>
+
+      <li class="fav-gap" aria-hidden="true"></li>
+
+      <li><span class="fav-name">Carlo Scarpa</span></li>
+
+      <li class="fav-gap" aria-hidden="true"></li>
+
+      <li>
+        <span class="fav-name">谷川俊太郎</span>
+        <br>
+        <a href="https://www.iwanami.co.jp/book/b249024.html" target="_blank" rel="noopener">https://www.iwanami.co.jp/book/b249024.html</a>
+      </li>
+
+      <li class="fav-gap" aria-hidden="true"></li>
+
       <li>
         <span class="fav-name">CHAGE &amp; ASKA</span>
-        <br><!-- 日本語隠れ解説：名前とURLの間を改行する -->
+        <br>
         <a href="https://www.chage-aska.net/" target="_blank" rel="noopener">https://www.chage-aska.net/</a>
       </li>
 
-      <!-- 阪神タイガース（読み：はんしん たいがーす） -->
       <li>
         <span class="fav-name">阪神タイガース</span>
-        <br><!-- 日本語隠れ解説：名前とURLの間を改行する -->
+        <br>
         <a href="https://hanshintigers.jp/" target="_blank" rel="noopener">https://hanshintigers.jp/</a>
       </li>
 
-      <!-- まど・みちお（読み：まど みちお） -->
       <li>
         <span class="fav-name">まど・みちお</span>
-        <br><!-- 日本語隠れ解説：名前とURLの間を改行する -->
+        <br>
         <a href="https://www.iwanami.co.jp/book/b287521.html" target="_blank" rel="noopener">https://www.iwanami.co.jp/book/b287521.html</a>
       </li>
 
-      <!-- Louis I. Kahn（読み：るいす あい かーん） -->
       <li><span class="fav-name">Louis I. Kahn</span></li>
 
-      <!-- ここから下に追加していく（あいうえお順で挿入） -->
-      <!--
-      <li>
-        <span class="fav-name">〇〇</span>
-        <br>
-        <a href="https://example.com/" target="_blank" rel="noopener">https://example.com/</a>
-      </li>
-      -->
+      <li class="fav-gap" aria-hidden="true"></li>
     </ul>
   </main>
 </body>
