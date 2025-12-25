@@ -28,3 +28,12 @@ body{margin:0;font-family:"Yu Gothic","YuGothic","Yu Gothic UI","Hiragino Kaku G
 /* リンクの下線を消す（必要条件）
    - color:inherit で文字色を本文と揃える */
 .nav a{text-decoration:none;color:inherit}
+
+
+
+/* トップのロゴ表示エリア：画面の高さからヘッダー分を引いた高さを最低限確保し、中央に配置する */
+.top-logo{min-height:calc(100vh - 180px);display:flex;align-items:center;justify-content:center;padding:16px}
+
+/* ロゴ画像：横幅を画面いっぱいにしつつ、縦横比を崩さない（height:auto） */
+.top-logo-img{width:100vw;max-width:100%;height:auto;max-height:100%}
+
