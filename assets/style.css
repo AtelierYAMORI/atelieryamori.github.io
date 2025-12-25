@@ -1,0 +1,30 @@
+/* ページ全体の基本設定
+   - margin:0 でブラウザ標準の余白を消す
+   - font-family は「游ゴシック優先」→無ければ近いゴシックへ自動切替
+   - line-height で読みやすい行間にする */
+body{margin:0;font-family:"Yu Gothic","YuGothic","Yu Gothic UI","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;line-height:1.7}
+
+/* 中央寄せ＋余白（レイアウトの土台）
+   - max-width で本文幅を制限
+   - margin:0 auto で中央寄せ
+   - padding で上下左右に最小限の余白 */
+.wrap{max-width:980px;margin:0 auto;padding:24px 16px}
+
+/* ヘッダー内を「左:タイトル、右上:ナビ」に分ける
+   - display:flex で横並びにする
+   - justify-content:space-between で左右に分ける
+   - align-items:flex-start で上端を揃え、ナビが右上に来やすくする */
+.site-header .wrap{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+
+/* タイトルの余白を整える（h1のデフォルト余白を消す） */
+.site-title{margin:0;font-size:24px;font-weight:600}
+
+/* ナビを横並びにする
+   - display:flex でリンクを横に並べる
+   - gap で間隔
+   - flex-wrap で画面が狭い時に折り返せるようにする */
+.nav{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+
+/* リンクの下線を消す（必要条件）
+   - color:inherit で文字色を本文と揃える */
+.nav a{text-decoration:none;color:inherit}

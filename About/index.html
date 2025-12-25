@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <!-- 文字化け防止。日本語サイトはUTF-8で統一 -->
+  <meta charset="utf-8">
+
+  <!-- スマホ表示の基本設定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ページ固有のtitle（検索結果やタブ表示に効く） -->
+  <title>About | Atelier YAMORI</title>
+
+  <!-- 共通CSSを読み込む（Aboutは1階層下なので ../ を付ける） -->
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+  <!-- 全ページ共通のヘッダー（ここを揃えるとサイト全体が整う） -->
+  <header class="site-header">
+    <div class="wrap">
+      <!-- ロゴ兼サイト名。クリックでトップへ戻る -->
+      <a class="brand" href="../">Atelier YAMORI</a>
+
+      <!-- ナビ。現在地のページだけ aria-current="page" を付ける -->
+      <nav class="nav" aria-label="Global navigation">
+        <a href="../">Top</a>
+        <a href="./" aria-current="page">About</a>
+        <a href="../works/">Works</a>
+        <a href="../diaries/">Diaries</a>
+        <a href="../favorites/">Favorites</a>
+        <a href="../contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- このページの本文 -->
+  <main class="wrap">
+    <!-- ページ見出し（h1は1ページに基本1つ） -->
+    <h1>About</h1>
+
+    <!-- 略歴（写真＋紹介文） -->
+    <section aria-labelledby="bio-title">
+      <h2 id="bio-title">略歴</h2>
+
+      <!-- 写真とキャプションをまとめる。写真ファイルは自分の実ファイル名に合わせて変更 -->
+      <figure>
+        <!-- 例: ../assets/img/profile.jpg を置いた場合。存在しないと画像が出ないので注意 -->
+        <img src="../assets/img/profile.jpg" alt="舟木健太郎のポートレート" width="640" height="640">
+        <figcaption>Photo: 自分で撮ったやつ、または友人に撮ってもらったやつ</figcaption>
+      </figure>
+
+      <!-- ここは「ふざける」ゾーン。数百文字くらいを想定 -->
+      <p>
+        舟木健太郎。1999年4月7日生まれ。
+      </p>
+
+      <!-- 連絡先や拠点など、必要ならここに追記 -->
+      <!-- <p>拠点: 兵庫。活動: 建築、写真、文章。</p> -->
+    </section>
+
+    <!-- フィロソフィー（真剣） -->
+    <section aria-labelledby="philosophy-title">
+      <h2 id="philosophy-title">フィロソフィー</h2>
+
+      <!-- ここは「真剣」ゾーン。数百字くらいを想定 -->
+      <p>
+        生きねばならない。
+      </p>
+    </section>
+
+    <!-- 年表 -->
+    <section aria-labelledby="timeline-title">
+      <h2 id="timeline-title">年表</h2>
+
+      <!-- 年表は「箇条書き」にしておくと増やしやすい -->
+      <ul>
+        <!-- 例として提示いただいた文章をそのまま入れている。必要に応じて追加していく -->
+        <li>
+          <strong>1999年（0歳）</strong><br>
+          4月7日。母・舟木素子、父・高松一郎のもとに生まれる。体重3990グラム。
+          予定日は4/2であったため、当時からどんくさかったようである。
+          予定日を過ぎていたためか、既に頭髪が生えていた。
+          この日へその緒を切られた瞬間から、人生の困難がスタートする。（それはみんな同じ）
+        </li>
+
+        <!-- 追加例（テンプレ）。この形で増やすだけでOK -->
+        <!--
+        <li>
+          <strong>2018年（19歳）</strong><br>
+          ここに出来事を書く。
+        </li>
+        -->
+      </ul>
+    </section>
+  </main>
+
+  <!-- フッター（必要なら） -->
+  <!--
+  <footer class="wrap">
+    <small>© Atelier YAMORI</small>
+  </footer>
+  -->
+</body>
+</html>

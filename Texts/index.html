@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <!-- 文字化け防止。日本語サイトはUTF-8で統一 -->
+  <meta charset="utf-8">
+
+  <!-- スマホ表示の基本設定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ページ固有のtitle（タブ表示・検索結果に効く） -->
+  <title>Contact | Atelier YAMORI</title>
+
+  <!-- 共通CSSを読み込む（Contactは1階層下なので ../ を付ける） -->
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+  <!-- 全ページ共通のヘッダー（ここを揃えるとサイト全体が整う） -->
+  <header class="site-header">
+    <div class="wrap">
+      <!-- ロゴ兼サイト名。クリックでトップへ戻る -->
+      <a class="brand" href="../">Atelier YAMORI</a>
+
+      <!-- ナビ。現在地のページだけ aria-current="page" を付ける -->
+      <nav class="nav" aria-label="Global navigation">
+        <a href="../">Top</a>
+        <a href="../about/">About</a>
+        <a href="../works/">Works</a>
+        <a href="../texts/">Texts</a>
+        <a href="../favorites/">Favorites</a>
+        <a href="./" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- このページの本文 -->
+  <main class="wrap">
+    <!-- ページ見出し（h1は1ページに基本1つ） -->
+    <h1>Contact</h1>
+
+    <!-- 連絡先情報（最小構成） -->
+    <p>
+      <!-- mailto: はクリックでメール作成画面を開ける -->
+      mail：<a href="mailto:ate1ieryam0ri@gmail.com">ate1ieryam0ri@gmail.com</a><br>
+
+      <!-- tel: はスマホでタップすると発信できる（ハイフン無しが無難） -->
+      tel：<a href="tel:08084767321">080-8476-7321</a>
+    </p>
+  </main>
+</body>
+</html>
