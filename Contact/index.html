@@ -17,21 +17,25 @@
 <body>
   <!-- 全ページ共通のヘッダー（ここを揃えるとサイト全体が整う） -->
   <header class="site-header">
-    <div class="wrap">
-      <!-- ロゴ兼サイト名。クリックでトップへ戻る -->
-      <a class="brand" href="../">Atelier YAMORI</a>
+  <!-- .wrap は幅揃え用、header-row は「左：サイト名／右：ナビ」を横並びにするため -->
+  <div class="wrap header-row">
 
-      <!-- ナビ。現在地のページだけ aria-current="page" を付ける -->
-      <nav class="nav" aria-label="Global navigation">
-        <a href="../">Top</a>
-        <a href="../About/">About</a>
-        <a href="../Works/">Works</a>
-        <a href="../Texts/">Texts</a>
-        <a href="../Favorites/">Favorites</a>
-        <a href="./" aria-current="page">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <!-- site-title の“器”を作ることで、Worksと同じ見た目（大きさ・太さ）が当たりやすくなる -->
+    <p class="site-title">
+      <a class="brand" href="../">Atelier YAMORI</a>
+    </p>
+
+    <nav class="nav" aria-label="Global navigation">
+      <a href="../">Top</a>
+      <a href="../About/">About</a>
+      <a href="../Works/">Works</a>
+      <a href="../Texts/">Texts</a>
+      <a href="../Favorites/">Favorites</a>
+      <a href="./" aria-current="page">Contact</a>
+    </nav>
+
+  </div>
+</header>
 
   <!-- このページの本文 -->
   <main class="wrap">
