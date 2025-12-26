@@ -1,10 +1,8 @@
-/* ページごとにスクロールバー有無が変わって横幅がズレるのを防ぐ */
-html{overflow-y:scroll;}
+/* レイアウトのズレ予防（ページごとのスクロールバー有無で横幅が変わるのを防ぐ） */
+html{overflow-y:scroll;scrollbar-gutter:stable;}
+html,body{overflow-x:hidden;}
 
-/* ページ全体の基本設定
-   - margin:0 でブラウザ標準の余白を消す
-   - font-family は「游ゴシック優先」→無ければ近いゴシックへ自動切替
-   - line-height で読みやすい行間にする */
+/* ページ全体の基本設定 */
 body{margin:0;font-family:"Yu Gothic","YuGothic","Yu Gothic UI","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;line-height:1.7}
 
 /* 中央寄せ＋余白（レイアウトの土台）
@@ -37,8 +35,14 @@ body{margin:0;font-family:"Yu Gothic","YuGothic","Yu Gothic UI","Hiragino Kaku G
 /* トップのロゴ表示エリア：画面の高さからヘッダー分を引いた高さを最低限確保し、中央に配置する */
 .top-logo{min-height:calc(100vh - 180px);display:flex;align-items:center;justify-content:center;padding:16px}
 
-/* ロゴ画像：横幅を画面いっぱいにしつつ、縦横比を崩さない（height:auto） */
-.top-logo-img{width:100vw;max-width:100%;height:auto;max-height:100%}
+/* TOPのロゴ画像：100vw をやめて 100% にする（横ズレの原因を潰す） */
+.top-logo-img{
+  width:100%;
+  max-width:100%;
+  height:auto;
+  max-height:100%;
+  display:block;
+}
 
 
 /* 【通常のリンク】青にならず、常に黒で表示する */
