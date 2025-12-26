@@ -37,3 +37,26 @@ body{margin:0;font-family:"Yu Gothic","YuGothic","Yu Gothic UI","Hiragino Kaku G
 /* ロゴ画像：横幅を画面いっぱいにしつつ、縦横比を崩さない（height:auto） */
 .top-logo-img{width:100vw;max-width:100%;height:auto;max-height:100%}
 
+
+/* 【通常のリンク】青にならず、常に黒で表示する */
+a{
+  color:#000;           /* リンク文字の色を黒に固定 */
+  text-decoration:none; /* 下線を消す（下線を残したいならこの1行を削除） */
+}
+
+/* 【既に見たリンク】紫にならず、灰色で表示する */
+a:visited{
+  color:#888;           /* 訪問済みリンクの色を灰色にする */
+}
+
+/* 【マウスを乗せた時】色が勝手に変わらないようにする */
+a:hover{
+  color:#000;           /* ホバー時も黒のまま */
+}
+
+/* 【クリックしている瞬間】一瞬だけ色が変わるのを防ぐ */
+a:active{
+  color:#000;           /* アクティブ時も黒のまま */
+}
+
+
