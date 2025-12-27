@@ -16,23 +16,32 @@
 <body>
   <!-- ヘッダー：サイト名＋ナビ（全ページで揃える） -->
   <header class="site-header">
-    <div class="wrap">
-      <!-- サイト名：トップへ（ここから3階層上がトップ） -->
+  <!-- site-header：全ページ共通のヘッダー領域。ここを統一すると見た目が揃います。 -->
+
+  <div class="wrap header-row">
+    <!-- wrap：中央寄せ＋余白＋最大幅を揃える箱（共通CSSが効く） -->
+    <!-- header-row：左(サイト名)と右(ナビ)を横並びにするためのクラス（flex等が効く） -->
+
+    <p class="site-title">
+      <!-- site-title：左上の「サイト名」まとまり。p にすると余計な見出しスタイルの影響を避けやすいです。 -->
       <a class="brand" href="../../../">Atelier YAMORI</a>
+      <!-- brand：左上サイト名リンクに「大きさ・太さ」等の共通スタイルを当てるクラス -->
+      <!-- href="../../../"：今の場所は /Archives/Diaries/2025-12/ なので、3階層上がトップです -->
+    </p>
 
-      <!-- ナビ：主要ページへ（階層に合わせて ../../../ や ../../ を使う） -->
-      <nav class="nav" aria-label="Global navigation">
-        <a href="../../../About/">About</a>
-        <a href="../../../Works/">Works</a>
+    <nav class="nav" aria-label="Global navigation">
+      <a href="../../../About/">About</a>
+      <a href="../../../Works/">Works</a>
 
-        <!-- Archives は /Archives/ に戻す（今は /Archives/Diaries/2025-12/ なので ../../ でOK） -->
-        <a href="../../">Archives</a>
+      <a href="../../">Archives</a>
+      <!-- 今は /Archives/Diaries/2025-12/ なので、2階層上（/Archives/）へ戻すのが ../../ です -->
 
-        <a href="../../../Favorites/">Favorites</a>
-        <a href="../../../Contact/">Contact</a>
-      </nav>
-    </div>
+      <a href="../../../Favorites/">Favorites</a>
+      <a href="../../../Contact/">Contact</a>
+    </nav>
+  </div>
   </header>
+
 
   <!-- メイン：本文領域 -->
   <main class="wrap">
