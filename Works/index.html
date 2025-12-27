@@ -9,6 +9,23 @@
   <title>Works | Atelier YAMORI</title>
   <!-- 共通CSS（works は1階層下なので ../ ） -->
   <link rel="stylesheet" href="../assets/style.css">
+
+  <!-- ① 追加：Worksページ内でも Texts と同じ見た目にするためのCSS -->
+<style>
+  .text-list{list-style:none;padding-left:0;margin:16px 0 0}
+  /* list-style:none で文頭の「・」を消す
+     padding-left:0 で左のへこみ（余白）を消す
+     margin で見出し（Texts）と一覧の間に少し間隔をつける */
+
+  .text-list li{margin:10px 0}
+  /* 各タイトルの上下に少し余白をつけて読みやすくする */
+
+  .text-list a{font-size:1.00rem;text-decoration:none;font-weight:600}
+  /* font-size で文字サイズを調整
+     text-decoration:none で下線を消す
+     font-weight:600 で太字にする */
+</style>
+<!-- ここまでを <head> の中（style.css の読み込みの下あたり）に追加 -->
 </head>
 
 <body>
@@ -23,7 +40,7 @@
         <a href="../">Top</a>
         <a href="../About/">About</a>
         <!-- 現在地 -->
-        <a href="./Works.html" aria-current="page">Works</a>
+        <a href="./" aria-current="page">Works</a>
         <a href="../Texts">Texts</a>
         <a href="../Favorites/">Favorites</a>
         <a href="../Contact/">Contact</a>
@@ -78,6 +95,21 @@
 
       </div>
     </section>
+
+    <!-- ② 追加：Worksのグリッド(section)の「下」にTexts一覧を差し込む -->
+<section id="texts" aria-label="Texts list">
+  <h2>Texts</h2>
+
+  <ul class="text-list">
+    <li><a href="./Texts/251226.html">二郎系ラーメンのふしぎ</a></li>
+    <li><a href="./Texts/2025-worst-lost/">2025 worst lost</a></li>
+    <!-- 追加したい記事が増えたら、この li を同じ形で増やす -->
+    <!-- 例：
+    <li><a href="./Texts/xxx/">記事タイトル</a></li>
+    -->
+  </ul>
+</section>
+<!-- ここまでを <main class="wrap"> の中で Worksグリッドの直後に追加 -->
   </main>
 </body>
 </html>
