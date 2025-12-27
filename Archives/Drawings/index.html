@@ -16,14 +16,6 @@
   <style>
     /* ===== Drawingsページ専用スタイル ===== */
 
-    /* 左上の「Atelier YAMORI」を大きくする */
-    .site-header .brand{
-     font-size:1.6rem;     /* 好きな大きさに調整OK（例：1.4〜2.0） */
-     font-weight:700;      /* 少し強くする（不要なら消してOK） */
-     letter-spacing:0.02em;/* ほんの少しだけ間隔（不要なら消してOK） */
-     line-height:1.2;
-    }
-
     /* 画像を並べるグリッド全体 */
     .drawing-grid{
       display:grid;                          /* CSSグリッドを使用 */
@@ -60,21 +52,27 @@
 
 <body>
   <!-- ===== ヘッダー（全ページ共通） ===== -->
-  <header class="site-header">
-    <div class="wrap">
-      <!-- サイト名ロゴ：クリックでトップへ戻る -->
-      <a class="brand" href="../../">Atelier YAMORI</a>
+ <header class="site-header">
+  <!-- site-header：全ページ共通のヘッダー領域。ここを揃えると統一感が出ます -->
+  <div class="wrap header-row">
+    <!-- wrap：横幅を揃えて中央寄せ＋余白を作る箱（style.css の .wrap が効く） -->
+    <!-- header-row：ロゴ(左) と ナビ(右) を横並びに整列させるためのクラス（flex等が効く） -->
 
-      <!-- グローバルナビゲーション -->
-      <nav class="nav" aria-label="Global navigation">
-        <a href="../../About/">About</a>
-        <a href="../../Works/">Works</a>
-        <a href="../">Archives</a>
-        <a href="../../Favorites/">Favorites</a>
-        <a href="../../Contact/">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <a class="brand" href="../../">Atelier YAMORI</a>
+    <!-- brand：左上のサイト名リンク。style.css 側の .brand の見た目が適用されます -->
+    <!-- href="../../"：Drawings は2階層下なので、トップへ戻るには ../../ が正解 -->
+
+    <nav class="nav" aria-label="Global navigation">
+      <!-- nav：右上のメニュー。style.css 側の .nav が適用されます -->
+      <a href="../../About/">About</a>
+      <a href="../../Works/">Works</a>
+      <a href="../">Archives</a>
+      <!-- Archivesは1階層上（/Archives/）に戻るので ../ -->
+      <a href="../../Favorites/">Favorites</a>
+      <a href="../../Contact/">Contact</a>
+    </nav>
+  </div>
+</header>
 
   <!-- ===== メインコンテンツ ===== -->
   <main class="wrap">
