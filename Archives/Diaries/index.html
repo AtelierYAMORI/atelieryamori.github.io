@@ -11,6 +11,23 @@
 
   <!-- 共通CSS：このページは /Archives/Diaries/ なので、assets へは ../../ で戻る -->
   <link rel="stylesheet" href="../../assets/style.css">
+
+  <style>
+  /* diary-months：月リンク一覧だけに効かせる（他ページやナビには影響しない） */
+  .diary-months{list-style:none;padding-left:0;margin:16px 0 0}
+  /* list-style:none で文頭の「・」を消します。
+     padding-left:0 で左のへこみ（余白）も消します。
+     margin で上に少し余白を作ります。 */
+
+  .diary-months li{margin:10px 0}
+  /* 各行の上下に余白を付けて読みやすくします。 */
+
+  .diary-months a{font-size:1.00rem;font-weight:600;text-decoration:none}
+  /* font-size で少し大きくします（例：1.00→1.05）。
+     font-weight で太くします。
+     text-decoration:none で下線を消します（Textsと同じ感じ）。 */
+  </style>
+
 </head>
 
 <body>
