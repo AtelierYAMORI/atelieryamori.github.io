@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <!-- 文字化け防止。日本語サイトはUTF-8で統一 -->
+  <meta charset="utf-8">
+
+  <!-- スマホ表示の基本設定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ページ固有のtitle（タブ表示・検索結果に効く） -->
+  <title>Contact | Atelier YAMORI</title>
+
+  <!-- 共通CSSを読み込む（Contactは1階層下なので ../ を付ける） -->
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+  <!-- 全ページ共通のヘッダー（ここを揃えるとサイト全体が整う） -->
+  <header class="site-header">
+  <!-- .wrap は幅揃え用、header-row は「左：サイト名／右：ナビ」を横並びにするため -->
+  <div class="wrap header-row">
+
+    <!-- site-title の“器”を作ることで、Worksと同じ見た目（大きさ・太さ）が当たりやすくなる -->
+    <p class="site-title">
+      <a class="brand" href="../">Atelier YAMORI</a>
+    </p>
+
+    <nav class="nav" aria-label="Global navigation">
+        <a href="../About/">About</a>
+        <a href="../Works/">Works</a>
+
+        <!-- 現在地（Archives）：見た目変更用class＋アクセシビリティ属性 -->
+        <a href="./" class="is-current" aria-current="page">Archives</a>
+
+        <a href="../Favorites/">Favorites</a>
+        <a href="../Contact/">Contact</a>
+      </nav>
+
+  </div>
+</header>
+
+<!-- メイン本文：wrapで幅制限＋左右余白を統一 -->
+  <main class="wrap">
+
+    <!-- ページの主見出し -->
+    <h1>Archives</h1>
+
+    <!-- Archivesの説明文 -->
+    <p>
+      発表を目的としない、日々の記録や試行の集積。
+      時間とともに溜まっていくものを、そのまま保存しています。
+    </p>
+
+    <!-- アーカイブ項目一覧 -->
+    <section class="archives-list">
+      <ul>
+        <!-- ./Diaries/ は Archives/Diaries/ を意味する（相対パス） -->
+        <li><a href="./Diaries/">Diaries</a></li>
+        <li><a href="./Photographs/">Photographs</a></li>
+        <li><a href="./Drawings/">Drawings</a></li>
+        <li><a href="./Poems/">Poems</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+</body>
+</html>
