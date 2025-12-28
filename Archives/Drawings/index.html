@@ -51,14 +51,33 @@
 </head>
 
 <body>
-  <!-- ===== ヘッダー（全ページ共通） ===== -->
- <header class="site-header">
-  <!-- site-header：全ページ共通のヘッダー領域。ここを揃えると統一感が出ます -->
-  <div class="wrap">
-  <p class="site-title"><a class="brand" ...>Atelier YAMORI</a></p>
-  <nav class="nav">...</nav>
-</div>
-</header>
+  <!-- ヘッダー：サイト名＋ナビ（全ページで揃えると統一感が出る） -->
+  <header class="site-header">
+  <!-- site-header：サイト全体で共通の「ヘッダー領域」です。ここを揃えると全ページで見た目が統一されます。 -->
+  <div class="wrap header-row">
+    <!-- wrap：横幅を揃えて中央寄せ＋余白をつくるための箱です（style.css の .wrap が効きます）。 -->
+    <!-- header-row：ロゴ(左) と ナビ(右) を横並びにするためのクラスです（flex などが当たります）。 -->
+
+    <p class="site-title">
+      <!-- site-title：左上の「サイト名」部分のまとまりです。p にすることで余計な見出しスタイル(h1等)の影響を避けられます。 -->
+      <a class="brand" href="../../">Atelier YAMORI</a>
+      <!-- brand：左上のサイト名リンクに「大きさ・太さ・下線なし」などの共通スタイルを当てるためのクラスです。
+           href="../../"：Diaries は /Archives/Diaries/ にあるので、2階層上(サイトのTop)へ戻る指定になります。 -->
+    </p>
+
+    <nav class="nav" aria-label="Global navigation">
+      <a href="../../About/">About</a>
+      <a href="../../Works/">Works</a>
+      <a href="../" aria-current="page">Archives</a>
+      <!-- Diaries は Archives の中にあるので、1階層上（/Archives/）へ戻す指定が ../ です。
+           aria-current="page"：今いる系統（現在地）としてマークするための属性です。 -->
+
+      <a href="../../Favorites/">Favorites</a>
+      <a href="../../Contact/">Contact</a>
+    </nav>
+  </div>
+  </header>
+
 
   <!-- ===== メインコンテンツ ===== -->
   <main class="wrap">
