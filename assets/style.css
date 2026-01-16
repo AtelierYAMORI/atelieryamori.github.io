@@ -111,5 +111,5 @@ a:active{
 /* Worksページ内の読み物セクション間の間隔を統一する */
 #texts,
 #failure-dictionary{
-  margin-top:64px;
+  margin-top:80px;
 }
