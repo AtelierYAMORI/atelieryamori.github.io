@@ -66,4 +66,45 @@ a:active{
   color:#000;           /* アクティブ時も黒のまま */
 }
 
+/* =========================================
+   Failure Dictionary（五十音リンク）用CSS
+   ========================================= */
+
+/* 五十音全体のリスト設定
+   ・list-style:none で行頭の「・」を消す
+   ・padding-left:0 で左側の余白を消す
+   ・margin で上下に適度な余白を確保 */
+.kana-list{
+  list-style:none;
+  padding-left:0;
+  margin:16px 0;
+}
+
+/* 五十音の「1行分（あ行・か行など）」の設定
+   ・margin-bottom で行と行の間隔を広げる */
+.kana-row{
+  margin:0 0 14px;
+}
+
+/* 各文字（あ・い・う…）そのものの設定
+   ・inline-block にしてクリック領域を安定させる
+   ・font-size で文字を少し大きくする
+   ・font-weight で視認性を上げる
+   ・margin-right で文字同士の間隔を広げる */
+.kana-row a{
+  display:inline-block;
+  font-size:1.15rem;
+  font-weight:600;
+  margin-right:16px;
+}
+
+/* 「Failure Dictionary」の下に入れる一行解説文
+   ・margin で見出し・本文との距離を調整
+   ・font-size を少し小さくして主張を抑える
+   ・color を薄いグレーにして説明文らしくする */
+.failure-description{
+  margin:8px 0 20px;
+  font-size:0.95rem;
+  color:#555;
+}
 
