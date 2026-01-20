@@ -54,74 +54,72 @@
 
   <!-- 本文 -->
   <main class="wrap">
-    <!-- ページ見出し -->
-    <h1>Works</h1>
+  <!-- ページ全体の大見出し -->
+  <h1>Works</h1>
 
-    <!-- 作品一覧（画像＋タイトル） -->
-    <!-- 画像は例。実際のファイル名に合わせて差し替える -->
-    <section aria-label="Works grid">
-      <div class="works-grid">
+  <!-- ===================== -->
+  <!-- 建築 セクション -->
+  <!-- ===================== -->
+  <section id="architecture" aria-label="Architecture">
+    <!-- 中見出し：ジャンル名 -->
+    <h2>建築</h2>
 
-        <!-- 1作品 = 1タイル。クリックで詳細ページへ -->
-        <a class="work" href="amidoyo-illumination.html">
-          <!-- 画像ファイル例：assets/img/works/01.jpg（実ファイルに合わせて変更） -->
-          <img src="../assets/img/works/01.jpg" alt="【建築】雨樋照明">
-          <span class="work-title">【建築】雨樋照明</span>
+    <!-- 作品名の一覧。
+         .text-list は Texts と同じ見た目になるようにした既存CSSを流用 -->
+    <ul class="text-list">
+      <!-- 各 li が1作品。
+           a の href を「作品ページの場所」に合わせて調整する -->
+      <li>
+        <a href="./Architecture/ukei-raisan/">雨景礼賛</a>
+      </li>
+      <li>
+        <a href="./Architecture/from-the-hip/">From the HIP</a>
+      </li>
+      <li>
+        <a href="./Architecture/mittyan1202/">みっちゃん教室改装</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===================== -->
+  <!-- 本 セクション -->
+  <!-- ===================== -->
+  <section id="books" aria-label="Books">
+    <h2>本</h2>
+
+    <ul class="text-list">
+      <li>
+        <a href="./Books/2035-catchball/">
+          2035年のキャッチボール
         </a>
+      </li>
+    </ul>
+  </section>
 
-        <a class="work" href="photo-xxx.html">
-          <img src="../assets/img/works/02.jpg" alt="【写真】○○">
-          <span class="work-title">【写真】○○</span>
-        </a>
+  <!-- ===================== -->
+  <!-- 詩 セクション -->
+  <!-- ===================== -->
+  <section id="poems" aria-label="Poems">
+    <h2>詩</h2>
 
-        <a class="work" href="poem-xxx.html">
-          <img src="../assets/img/works/03.jpg" alt="【詩】○○">
-          <span class="work-title">【詩】○○</span>
-        </a>
+    <ul class="text-list">
+      <li>
+        <a href="./Poems/no1-100/">No.1-100</a>
+      </li>
+      <li>
+        <a href="./Poems/no101-200/">No.101-200</a>
+      </li>
+    </ul>
+  </section>
 
-        <a class="work" href="architecture-xxx.html">
-          <img src="../assets/img/works/04.jpg" alt="【建築】○○">
-          <span class="work-title">【建築】○○</span>
-        </a>
-
-        <a class="work" href="photo-yyy.html">
-          <img src="../assets/img/works/05.jpg" alt="【写真】○○">
-          <span class="work-title">【写真】○○</span>
-        </a>
-
-        <!-- 追加はこの形で増やす -->
-        <!--
-        <a class="work" href="xxx.html">
-          <img src="../assets/img/works/06.jpg" alt="【ジャンル】タイトル">
-          <span class="work-title">【ジャンル】タイトル</span>
-        </a>
-        -->
-
-      </div>
-    </section>
-
-    <!-- ② 追加：Worksのグリッド(section)の「下」にTexts一覧を差し込む -->
-<section id="texts" aria-label="Texts list">
-  <h1>Texts</h1>
-
-  <ul class="text-list">
-    <li><a href="./Texts/251226.html">二郎系ラーメンのふしぎ</a></li>
-    <li><a href="./Texts/251231.html">馬のひとみ　そして風のうた</a></li>
-    <li><a href="./Texts/260117.html">書いていないこと</a></li>
-    <!-- 追加したい記事が増えたら、この li を同じ形で増やす -->
-    <!-- 例：
-    <li><a href="./Texts/xxx/">記事タイトル</a></li>
-    -->
-  </ul>
-</section>
-<!-- ここまでを <main class="wrap"> の中で Worksグリッドの直後に追加 -->
-
-<!-- Failure Dictionary セクション開始 -->
-<section id="failure-dictionary" aria-label="Failure Dictionary">
+  <!-- ===================== -->
+  <!-- Failure Dictionary -->
+  <!-- ===================== -->
+  <section id="failure-dictionary" aria-label="Failure Dictionary">
 
   <!-- セクション見出し
        h1 にしているのは Texts と同じ扱いにするため -->
-  <h1>Failure Dictionary</h1>
+  <h2>失敗大百科　Failure Dictionary</h2>
 
   <p class="failure-description">
   これほど失敗を重ねても、未だ命は奪われず、失ってもいない。
@@ -223,7 +221,27 @@
 
   </ul>
 </section>
-<!-- Failure Dictionary セクション終了 -->
+
+ <!-- ===================== -->
+ <!-- 書置き セクション -->
+ <!-- ===================== -->
+  <section id="texts" aria-label="Texts list">
+    <!-- 見出し名だけ「Texts → 書置き」に変更 -->
+    <h2>書置き</h2>
+
+    <!-- 中身は今までの Texts と同じ -->
+    <ul class="text-list">
+      <li>
+        <a href="./Texts/251226.html">二郎系ラーメンのふしぎ</a>
+      </li>
+      <li>
+        <a href="./Texts/251231.html">馬のひとみ　そして風のうた</a>
+      </li>
+      <li>
+        <a href="./Texts/260117.html">書いていないこと</a>
+      </li>
+    </ul>
+  </section>
 
 
   </main>
