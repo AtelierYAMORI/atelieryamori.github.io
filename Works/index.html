@@ -30,8 +30,23 @@
      #texts は <section id="texts"> を指す
      margin-top で上（作品群）との余白を増やす
      48px は大きめ。32px や 64px に変えて好みで調整OK */
+
+   /* ===============================
+   Works：各中見出しブロックの間隔統一
+   =============================== */
+
+/* sectionごとの縦間隔を統一 */
+main > section{margin-top:64px;}
+
+/* 最初の section だけは詰める */
+main > section:first-of-type{margin-top:32px;}
+
+/* 中見出し自体の余白を整理 */
+main h2{margin:0 0 16px;}
+
+/* 見出し直後の要素の余計な上余白を消す */
+main h2 + *{margin-top:0;}
 </style>
-<!-- ここまでを <head> の中（style.css の読み込みの下あたり）に追加 -->
 </head>
 
 <body>
