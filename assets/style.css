@@ -141,5 +141,7 @@ a:active{
   display:block;
 }
 
-/* フッターの中央揃え */
-.site-footer .wrap{text-align:center}
+/* フッター内の wrap だけを中央揃えにする */
+.site-footer .wrap{
+  text-align:center;
+}
