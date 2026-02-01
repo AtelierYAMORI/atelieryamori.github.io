@@ -130,8 +130,13 @@ a:active{
    Architecture 作品ページ：画像サイズ制御
    =============================== */
 
-main img{
-  max-width:100%;
+.architecture-figure{
+  max-width:720px;
+  margin:48px auto;
+}
+
+.architecture-figure img{
+  width:100%;
   height:auto;
   display:block;
 }
