@@ -125,3 +125,13 @@ a:active{
   text-align:center;    /* 記号を行の中央に配置する */
   margin:1.5em 0;       /* 記号の上下に余白をつけ、文章の呼吸を整える */
 }
+
+/* ===============================
+   Architecture 作品ページ：画像サイズ制御
+   =============================== */
+
+main img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
