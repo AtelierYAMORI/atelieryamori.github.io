@@ -141,8 +141,5 @@ a:active{
   display:block;
 }
 
-/* site-footer：フッター全体を指定するクラス */
-.site-footer{
-  /* text-align:center は、内部の文字要素（small など）を中央揃えにする */
-  text-align:center;
-}
+/* フッターの中央揃え */
+.site-footer .wrap{text-align:center}
