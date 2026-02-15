@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <!-- 文字化け防止。日本語サイトでは必須 -->
+  <meta charset="utf-8">
+
+  <!-- スマホやタブレットで横幅を画面に合わせる -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ブラウザのタブに表示されるタイトル -->
+  <!-- 「作品名 | 分類 | サイト名」という構成にしておくと整理しやすい -->
+  <title>ナンバープレート九九 | Others | Atelier YAMORI</title>
+
+  <!-- 共通CSSの読み込み -->
+  <!-- このファイルは /Works/Others/kuku/ にあるため、3階層上へ戻る -->
+  <link rel="stylesheet" href="../../../assets/style.css">
+
+
+</head>
+
+<body>
+  <!-- ヘッダー：サイト名＋ナビ（全ページで揃えると統一感が出る） -->
+  <header class="site-header">
+  <!-- site-header：サイト全体で共通の「ヘッダー領域」です。ここを揃えると全ページで見た目が統一されます。 -->
+  <div class="wrap header-row">
+    <!-- wrap：横幅を揃えて中央寄せ＋余白をつくるための箱です（style.css の .wrap が効きます）。 -->
+    <!-- header-row：ロゴ(左) と ナビ(右) を横並びにするためのクラスです（flex などが当たります）。 -->
+
+    <p class="site-title">
+      <!-- site-title：左上の「サイト名」部分のまとまりです。p にすることで余計な見出しスタイル(h1等)の影響を避けられます。 -->
+      <a class="brand" href="../../">Atelier YAMORI</a>
+      <!-- brand：左上のサイト名リンクに「大きさ・太さ・下線なし」などの共通スタイルを当てるためのクラスです。
+           href="../../"：Diaries は /Archives/Diaries/ にあるので、2階層上(サイトのTop)へ戻る指定になります。 -->
+    </p>
+
+      <!-- グローバルナビゲーション -->
+      <nav class="nav" aria-label="Global navigation">
+        <!-- Aboutページ -->
+        <a href="../../../About/">About</a>
+        <!-- Works配下のページなので、ここから2階層戻る -->
+        <!-- Worksトップへ戻る（このページはWorksそのものではないので aria-current は付けない） -->
+      <a href="../">Works</a>
+        <!-- その他の固定ページ -->
+        <a href="../../Archives/">Archives</a>
+        <a href="../../../Favorites/">Favorites</a>
+        <a href="../../../Contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>ナンバープレート九九</h1>
+
+    <p>
+    2023年より収集。
+    </p>
+
+    
+    <figure class="architecture-figure">
+      <img src="./image01.jpg" alt="ナンバープレート九九">
+    </figure>
+  
+  </main>
+
+  <!-- フッター。必要なければ省略してもよい -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© Atelier YAMORI</small>
+    </div>
+  </footer>
+
+</body>
+</html>
