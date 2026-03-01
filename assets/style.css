@@ -145,3 +145,10 @@ a:active{
 .site-footer .wrap{
   text-align:center;
 }
+
+/* 建築ページの画像まわり */
+.architecture-figure img{
+  display:block;      /* 画像をブロック要素にする（下の余白が安定する） */
+  width:100%;         /* 横幅いっぱいに表示（必要なければ削除可） */
+  margin-bottom:24px; /* 画像と画像の間に24pxの余白をつける */
+}
