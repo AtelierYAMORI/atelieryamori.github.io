@@ -153,36 +153,30 @@ a:active{
   margin-bottom:24px; /* 画像と画像の間に24pxの余白をつける */
 }
 
-/* タイトルと年号を横一列に並べるための箱
-   ・display:flex で中の要素を横並びにする
-   ・justify-content:space-between で左端にタイトル、右端に年号を配置する
-   ・align-items:baseline で文字の高さの基準線を揃え、見た目を自然にする
-   ・gap でタイトルと年号の間に余白をつくる
-   ・margin で下側に余白をつくり、本文と少し離す
-   ・flex-wrap:wrap で、画面が狭いときは無理に詰めず下に折り返せるようにする */
-.work-title-row{
+/* 作品タイトルと年号を同じ行に並べる
+   ・h1自体を横並びの箱にする
+   ・左にタイトル、右に年号を配置する */
+.work-title{
   display:flex;
-  justify-content:space-between;
   align-items:baseline;
+  justify-content:space-between;
   gap:24px;
   margin:0 0 32px;
-  flex-wrap:wrap;
 }
 
-/* タイトルの h1 に最初から入っている余白を消す
-   ・ブラウザ標準の margin があると、年号との高さがずれやすいため 0 にする */
-.work-title-row h1{
-  margin:0;
+/* タイトル文字のまとまり
+   ・必要以上に縮まないようにする */
+.work-title-text{
+  display:block;
 }
 
-/* 右側に置く年号の見た目
-   ・margin:0 で余計な余白を消す
-   ・font-size でタイトルより少し控えめな大きさにする
-   ・color:#666 で少し薄いグレーにし、主役であるタイトルより目立ちすぎないようにする
-   ・white-space:nowrap で「2023」が途中で折り返されないようにする */
+/* 年号の見た目
+   ・margin-left:auto で右端へ押し出す
+   ・少し小さく、やや薄い色にする */
 .work-year{
-  margin:0;
+  margin-left:auto;
   font-size:1rem;
+  font-weight:400;
   color:#666;
   white-space:nowrap;
 }
