@@ -152,3 +152,37 @@ a:active{
   width:100%;         /* 横幅いっぱいに表示（必要なければ削除可） */
   margin-bottom:24px; /* 画像と画像の間に24pxの余白をつける */
 }
+
+/* タイトルと年号を横一列に並べるための箱
+   ・display:flex で中の要素を横並びにする
+   ・justify-content:space-between で左端にタイトル、右端に年号を配置する
+   ・align-items:baseline で文字の高さの基準線を揃え、見た目を自然にする
+   ・gap でタイトルと年号の間に余白をつくる
+   ・margin で下側に余白をつくり、本文と少し離す
+   ・flex-wrap:wrap で、画面が狭いときは無理に詰めず下に折り返せるようにする */
+.work-title-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:24px;
+  margin:0 0 32px;
+  flex-wrap:wrap;
+}
+
+/* タイトルの h1 に最初から入っている余白を消す
+   ・ブラウザ標準の margin があると、年号との高さがずれやすいため 0 にする */
+.work-title-row h1{
+  margin:0;
+}
+
+/* 右側に置く年号の見た目
+   ・margin:0 で余計な余白を消す
+   ・font-size でタイトルより少し控えめな大きさにする
+   ・color:#666 で少し薄いグレーにし、主役であるタイトルより目立ちすぎないようにする
+   ・white-space:nowrap で「2023」が途中で折り返されないようにする */
+.work-year{
+  margin:0;
+  font-size:1rem;
+  color:#666;
+  white-space:nowrap;
+}
