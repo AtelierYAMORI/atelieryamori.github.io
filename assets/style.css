@@ -172,11 +172,14 @@ a:active{
 
 /* 年号の見た目
    ・margin-left:auto で右端へ押し出す
-   ・少し小さく、やや薄い色にする */
+   ・font-size を少し小さくして、タイトルとの強弱をつける
+   ・font-weight は親の h1 に合わせる
+   ・color は親の h1 に合わせる
+   ・white-space:nowrap で途中改行を防ぐ */
 .work-year{
   margin-left:auto;
-  font-size:1rem;
-  font-weight:400;
-  color:#666;
+  font-size:0.9em;
+  font-weight:inherit;
+  color:inherit;
   white-space:nowrap;
 }
