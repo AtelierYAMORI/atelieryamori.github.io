@@ -1,426 +1,300 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <!-- 文字化け防止（UTF-8） -->
   <meta charset="utf-8">
-  <!-- スマホ表示の基本設定 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- ページ固有のタイトル -->
   <title>Works | Atelier YAMORI</title>
-  <!-- 共通CSS（works は1階層下なので ../ ） -->
   <link rel="stylesheet" href="../assets/style.css">
-
-  <!-- ① 追加：Worksページ内でも Texts と同じ見た目にするためのCSS -->
-<style>
-  .text-list{list-style:none;padding-left:0;margin:16px 0 0}
-  /* list-style:none で文頭の「・」を消す
-     padding-left:0 で左のへこみ（余白）を消す
-     margin で見出し（Texts）と一覧の間に少し間隔をつける */
-
-  .text-list li{margin:10px 0}
-  /* 各タイトルの上下に少し余白をつけて読みやすくする */
-
-  .text-list a{font-size:1.00rem;text-decoration:none;font-weight:600}
-  /* font-size で文字サイズを調整
-     text-decoration:none で下線を消す
-     font-weight:600 で太字にする */
-  
-   #texts{margin-top:48px}
-  /* ここを追加
-     #texts は <section id="texts"> を指す
-     margin-top で上（作品群）との余白を増やす
-     48px は大きめ。32px や 64px に変えて好みで調整OK */
-
-   /* ===============================
-   Works：各中見出しブロックの間隔統一
-   =============================== */
-
-/* sectionごとの縦間隔を統一 */
-main > section{margin-top:64px;}
-
-/* 最初の section だけは詰める */
-main > section:first-of-type{margin-top:32px;}
-
-/* 中見出し自体の余白を整理 */
-main h2{margin:0 0 16px;}
-
-/* 見出し直後の要素の余計な上余白を消す */
-main h2 + *{margin-top:0;}
-</style>
 </head>
 
 <body>
-  <!-- 共通ヘッダー（サイト名＋ナビ） -->
   <header class="site-header">
     <div class="wrap">
-      <!-- サイト名（クリックでTopへ） -->
-      <p class="site-title"><a class="brand" href="../">Atelier YAMORI</a></p>
+      <p class="site-title">
+        <a href="../">Atelier YAMORI</a>
+      </p>
 
-      <!-- ナビ（CSSで右上・横並び） -->
       <nav class="nav" aria-label="Global navigation">
-       <a href="../About/">About</a>
-       <a href="./" aria-current="page">Works</a>
-       <a href="../Archives/">Archives</a>
-       <a href="../Favorites/">Favorites</a>
-       <a href="../Contact/">Contact</a>
+        <a href="../About/">About</a>
+        <a href="./" aria-current="page">Works</a>
+        <a href="../Archives/">Archives</a>
+        <a href="../Favorites/">Favorites</a>
+        <a href="../Contact/">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- 本文 -->
   <main class="wrap">
-  <!-- ページ全体の大見出し -->
-  <h1>Works</h1>
+    <h1>Works</h1>
 
-  <!-- ===================== -->
-  <!-- 建築 セクション -->
-  <!-- ===================== -->
-  <section id="architecture" aria-label="Architecture">
-    <!-- 中見出し：ジャンル名 -->
-    <h2>Architecture</h2>
+    <section id="architecture" aria-label="Architecture">
+      <h2>Architecture</h2>
+      <ul class="entry-list">
+        <li>
+          <a href="./Architecture/zyutaku-1/" class="entry-link">
+            <span>住宅設計No.1</span>
+            <span class="year">2020</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Architecture/kodomo-en/" class="entry-link">
+            <span>こども園</span>
+            <span class="year">2021</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Architecture/zyutaku-2/" class="entry-link">
+            <span>住宅設計No.2</span>
+            <span class="year">2021-2022</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Architecture/sotugyou-sekkei/" class="entry-link">
+            <span>卒業設計</span>
+            <span class="year">2022-2023</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Architecture/ukei-raisan/" class="entry-link">
+            <span>雨景礼賛</span>
+            <span class="year">2025</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Architecture/from-the-hip/" class="entry-link">
+            <span>From the HIP</span>
+            <span class="year">2025</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Architecture/mittyan1202/" class="entry-link">
+            <span>みっちゃん教室　椅子と机</span>
+            <span class="year">2025-2026</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Architecture/503-kagu-1/" class="entry-link">
+            <span>503号室家具No.1</span>
+            <span class="year">2026</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Architecture/503-kagu-2/" class="entry-link">
+            <span>503号室家具No.2</span>
+            <span class="year">2026</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Architecture/sawara-building/" class="entry-link">
+            <span>鰆ビル</span>
+            <span class="year">2026-</span>
+          </a>
+        </li>
+      </ul>
+    </section>
 
-    <!-- 作品名の一覧。
-         .text-list は Texts と同じ見た目になるようにした既存CSSを流用 -->
-    <ul class="text-list">
-      <!-- 各 li が1作品。
-           a の href を「作品ページの場所」に合わせて調整する -->
-    <li>
-     <a href="./Architecture/zyutaku-1/" class="work-link">
-      <span>住宅設計No.1</span>
-      <span class="year">2020</span>
-     </a>
-    </li>
+    <section id="books" aria-label="Books">
+      <h2>Books</h2>
+      <ul class="entry-list">
+        <li>
+          <a href="./Books/2035nen-no-catchball.html" class="entry-link">
+            <span>2035年のキャッチボール</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Books/russia-banana.html" class="entry-link">
+            <span>(仮称)ロシアのバナナのお話</span>
+          </a>
+        </li>
+      </ul>
+    </section>
 
-    <li>
-     <a href="./Architecture/kodomo-en/" class="work-link">
-      <span>こども園</span>
-      <span class="year">2021</span>
-     </a>
-    </li>
+    <section id="magazines" aria-label="Magazines">
+      <h2>Magazines</h2>
+      <ul class="entry-list">
+        <li>
+          <a href="./Magazines/LITTLE TREE vol.1/" class="entry-link">
+            <span>LITTLE TREE vol.1</span>
+            <span class="year">2025</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Magazines/LITTLE TREE vol.2/" class="entry-link">
+            <span>LITTLE TREE vol.2</span>
+            <span class="year">2025</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Magazines/LITTLE TREE vol.3/" class="entry-link">
+            <span>LITTLE TREE vol.3</span>
+            <span class="year">2025</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Magazines/LITTLE TREE vol.4/" class="entry-link">
+            <span>LITTLE TREE vol.4</span>
+            <span class="year">2025</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Magazines/sawara-building-magazine-01/" class="entry-link">
+            <span>鰆ビルマガジン vol.1</span>
+            <span class="year">2026</span>
+          </a>
+        </li>
+      </ul>
+    </section>
 
-    <li>
-     <a href="./Architecture/zyutaku-2/" class="work-link">
-      <span>住宅設計No.2</span>
-      <span class="year">2021-2022</span>
-     </a>
-    </li>
+    <section id="poems" aria-label="Poems">
+      <h2>Poems</h2>
+      <ul class="entry-list">
+        <li>
+          <a href="./Poems/no.1-50.html" class="entry-link">
+            <span>詩 50編 タイトル未定</span>
+          </a>
+        </li>
+      </ul>
+    </section>
 
-    <li>
-     <a href="./Architecture/sotugyou-sekkei/" class="work-link">
-      <span>卒業設計</span>
-      <span class="year">2022-2023</span>
-     </a>
-    </li>
+    <section id="others" aria-label="Others">
+      <h2>Others</h2>
+      <ul class="entry-list">
+        <li>
+          <a href="./Others/yoshimura-zyunzo-exterior-perspective/" class="entry-link">
+            <span>吉村順三外観パース</span>
+            <span class="year">2020</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Others/zyuichi-t-shorts/" class="entry-link">
+            <span>寿一Tシャツ</span>
+            <span class="year">2023</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Others/pc-lecture/" class="entry-link">
+            <span>PC LECTURE!!!</span>
+            <span class="year">2023</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Others/kuku/" class="entry-link">
+            <span>ナンバープレート九九</span>
+            <span class="year">2023-</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Others/maegawatyokin/" class="entry-link">
+            <span>前川貯金</span>
+            <span class="year">2026-</span>
+          </a>
+        </li>
+      </ul>
+    </section>
 
-    <li>
-     <a href="./Architecture/ukei-raisan/" class="work-link">
-      <span>雨景礼賛</span>
-      <span class="year">2025</span>
-     </a>
-    </li>
+    <section id="failure-dictionary" aria-label="Failure Dictionary">
+      <h2>Failure Dictionary</h2>
 
-    <li>
-     <a href="./Architecture/from-the-hip/" class="work-link">
-      <span>From the HIP</span>
-      <span class="year">2025</span>
-     </a>
-    </li>
+      <p class="failure-description">
+        これほど失敗を重ねても、未だ命は奪われず、失ってもいない。
+        そのことは一見何も起きていないようだけど、でも実はとっても凄いことなんじゃないか。そんな気がする。ありがとうございます。
+        僕はあんまり人の役に立てない人間であるが、せめてごみを分別することと、失敗をまとめておくことくらいは人様、ひとさまのお役に立ちたいと思っている。
+        失敗の提供もお待ちしています。いつでもご連絡ください。
+      </p>
 
-    <li>
-     <a href="./Architecture/mittyan1202/" class="work-link">
-      <span>みっちゃん教室　椅子と机</span>
-      <span class="year">2025-2026</span>
-     </a>
-    </li>
+      <ul class="kana-list">
+        <li class="kana-row">
+          <a href="./FailureDictionary/a.html">あ</a>
+          <a href="./FailureDictionary/i.html">い</a>
+          <a href="./FailureDictionary/u.html">う</a>
+          <a href="./FailureDictionary/e.html">え</a>
+          <a href="./FailureDictionary/o.html">お</a>
+        </li>
+        <li class="kana-row">
+          <a href="./FailureDictionary/ka.html">か</a>
+          <a href="./FailureDictionary/ki.html">き</a>
+          <a href="./FailureDictionary/ku.html">く</a>
+          <a href="./FailureDictionary/ke.html">け</a>
+          <a href="./FailureDictionary/ko.html">こ</a>
+        </li>
+        <li class="kana-row">
+          <a href="./FailureDictionary/sa.html">さ</a>
+          <a href="./FailureDictionary/shi.html">し</a>
+          <a href="./FailureDictionary/su.html">す</a>
+          <a href="./FailureDictionary/se.html">せ</a>
+          <a href="./FailureDictionary/so.html">そ</a>
+        </li>
+        <li class="kana-row">
+          <a href="./FailureDictionary/ta.html">た</a>
+          <a href="./FailureDictionary/chi.html">ち</a>
+          <a href="./FailureDictionary/tsu.html">つ</a>
+          <a href="./FailureDictionary/te.html">て</a>
+          <a href="./FailureDictionary/to.html">と</a>
+        </li>
+        <li class="kana-row">
+          <a href="./FailureDictionary/na.html">な</a>
+          <a href="./FailureDictionary/ni.html">に</a>
+          <a href="./FailureDictionary/nu.html">ぬ</a>
+          <a href="./FailureDictionary/ne.html">ね</a>
+          <a href="./FailureDictionary/no.html">の</a>
+        </li>
+        <li class="kana-row">
+          <a href="./FailureDictionary/ha.html">は</a>
+          <a href="./FailureDictionary/hi.html">ひ</a>
+          <a href="./FailureDictionary/fu.html">ふ</a>
+          <a href="./FailureDictionary/he.html">へ</a>
+          <a href="./FailureDictionary/ho.html">ほ</a>
+        </li>
+        <li class="kana-row">
+          <a href="./FailureDictionary/ma.html">ま</a>
+          <a href="./FailureDictionary/mi.html">み</a>
+          <a href="./FailureDictionary/mu.html">む</a>
+          <a href="./FailureDictionary/me.html">め</a>
+          <a href="./FailureDictionary/mo.html">も</a>
+        </li>
+        <li class="kana-row">
+          <a href="./FailureDictionary/ya.html">や</a>
+          <a href="./FailureDictionary/yu.html">ゆ</a>
+          <a href="./FailureDictionary/yo.html">よ</a>
+        </li>
+        <li class="kana-row">
+          <a href="./FailureDictionary/ra.html">ら</a>
+          <a href="./FailureDictionary/ri.html">り</a>
+          <a href="./FailureDictionary/ru.html">る</a>
+          <a href="./FailureDictionary/re.html">れ</a>
+          <a href="./FailureDictionary/ro.html">ろ</a>
+        </li>
+        <li class="kana-row">
+          <a href="./FailureDictionary/wa.html">わ</a>
+          <a href="./FailureDictionary/wo.html">を</a>
+          <a href="./FailureDictionary/n.html">ん</a>
+        </li>
+      </ul>
+    </section>
 
-    <li>
-     <a href="./Architecture/503-kagu-1/" class="work-link">
-      <span>503号室家具No.1</span>
-      <span class="year">2026</span>
-     </a>
-    </li>
-
-    <li>
-     <a href="./Architecture/503-kagu-2/" class="work-link">
-      <span>503号室家具No.2</span>
-      <span class="year">2026</span>
-     </a>
-    </li>
-
-    <li>
-     <a href="./Architecture/sawara-building/" class="work-link">
-      <span>鰆ビル</span>
-      <span class="year">2026-</span>
-     </a>
-    </li>
-
-    </ul>
-  </section>
-
-  <!-- ===================== -->
-  <!-- 本 セクション -->
-  <!-- ===================== -->
-  <section id="books" aria-label="Books">
-    <h2>Books</h2>
-
-    <ul class="text-list">
-      <li>
-        <a href="./Books/2035nen-no-catchball.html">2035年のキャッチボール</a>
-      </li>
-      
-      <li>
-        <a href="./Books/russia-banana.html">(仮称)ロシアのバナナのお話</a>
-      </li>
-
-    </ul>
-  </section>
-
-  <!-- ===================== -->
-  <!-- 雑誌 セクション -->
-  <!-- ===================== -->
-  <section id="poems" aria-label="Poems">
-    <h2>Magazines</h2>
-
-    <ul class="text-list">
-    <li>
-     <a href="./Magazines/LITTLE TREE vol.1/" class="work-link">
-      <span>LITTLE TREE vol.1</span>
-      <span class="year">2025</span>
-     </a>
-    </li>
-
-    <li>
-     <a href="./Magazines/LITTLE TREE vol.2/" class="work-link">
-      <span>LITTLE TREE vol.2</span>
-      <span class="year">2025</span>
-     </a>
-    </li>
-
-    <li>
-     <a href="./Magazines/LITTLE TREE vol.3/" class="work-link">
-      <span>LITTLE TREE vol.3</span>
-      <span class="year">2025</span>
-     </a>
-    </li>
-
-    <li>
-     <a href="./Magazines/LITTLE TREE vol.4/" class="work-link">
-      <span>LITTLE TREE vol.4</span>
-      <span class="year">2025</span>
-     </a>
-    </li>
-
-    <li>
-     <a href="./Magazines/sawara-building-magazine-01/" class="work-link">
-      <span>鰆ビルマガジン vol.1</span>
-      <span class="year">2026</span>
-     </a>
-    </li>
-
-    </ul>
-  </section>
-
-  <!-- ===================== -->
-  <!-- 詩 セクション -->
-  <!-- ===================== -->
-  <section id="poems" aria-label="Poems">
-    <h2>Poems</h2>
-
-    <ul class="text-list">
-      <li>
-        <a href="./Poems/no.1-50.html">詩 50編 タイトル未定</a>
-      </li>
-    </ul>
-  </section>
-
-  <!-- ===================== -->
-  <!-- その他 セクション -->
-  <!-- ===================== -->
-  <section id="others" aria-label="Others">
-  <h2>Others</h2>
-
-  <ul class="text-list">
-   <li>
-    <a href="./Others/yoshimura-zyunzo-exterior-perspective/" class="work-link">
-     <span>吉村順三外観パース</span>
-     <span class="year">2020</span>
-    </a>
-   </li>
-   
-   <li>
-    <a href="./Others/zyuichi-t-shorts/" class="work-link">
-     <span>寿一Tシャツ</span>
-     <span class="year">2023</span>
-    </a>
-   </li>
-
-   <li>
-    <a href="./Others/zyuichi-t-shorts/" class="work-link">
-     <span>PC LECTURE!!!</span>
-     <span class="year">2023</span>
-    </a>
-   </li>
-
-   <li>
-    <a href="./Others/kuku/" class="work-link">
-     <span>ナンバープレート九九</span>
-     <span class="year">2023-</span>
-    </a>
-   </li>
-
-   <li>
-    <a href="./Others/maegawatyokin/" class="work-link">
-     <span>前川貯金</span>
-     <span class="year">2026-</span>
-    </a>
-   </li>
-  </ul>
-</section>
-
-  <!-- ===================== -->
-  <!-- Failure Dictionary -->
-  <!-- ===================== -->
-  <section id="failure-dictionary" aria-label="Failure Dictionary">
-
-  <!-- セクション見出し
-       h1 にしているのは Texts と同じ扱いにするため -->
-  <h2>Failure Dictionary</h2>
-
-  <p class="failure-description">
-  これほど失敗を重ねても、未だ命は奪われず、失ってもいない。
-  そのことは一見何も起きていないようだけど、でも実はとっても凄いことなんじゃないか。そんな気がする。ありがとうございます。
-  僕はあんまり人の役に立てない人間であるが、せめてごみを分別することと、失敗をまとめておくことくらいは人様、ひとさまのお役に立ちたいと思っている。
-  失敗の提供もお待ちしています。いつでもご連絡ください。
-  </p>
-
-  <!-- 五十音リンク全体を包むリスト
-       見た目はリストだが、CSSで「・」は消している -->
-  <!-- 五十音リンク全体 -->
-  <ul class="kana-list">
-
-    <!-- あ行 -->
-    <li class="kana-row">
-      <a href="./FailureDictionary/a.html">あ</a>
-      <a href="./FailureDictionary/i.html">い</a>
-      <a href="./FailureDictionary/u.html">う</a>
-      <a href="./FailureDictionary/e.html">え</a>
-      <a href="./FailureDictionary/o.html">お</a>
-    </li>
-
-    <!-- か行 -->
-    <li class="kana-row">
-      <a href="./FailureDictionary/ka.html">か</a>
-      <a href="./FailureDictionary/ki.html">き</a>
-      <a href="./FailureDictionary/ku.html">く</a>
-      <a href="./FailureDictionary/ke.html">け</a>
-      <a href="./FailureDictionary/ko.html">こ</a>
-    </li>
-
-    <!-- さ行 -->
-    <li class="kana-row">
-      <a href="./FailureDictionary/sa.html">さ</a>
-      <a href="./FailureDictionary/shi.html">し</a>
-      <a href="./FailureDictionary/su.html">す</a>
-      <a href="./FailureDictionary/se.html">せ</a>
-      <a href="./FailureDictionary/so.html">そ</a>
-    </li>
-
-    <!-- た行 -->
-    <li class="kana-row">
-      <a href="./FailureDictionary/ta.html">た</a>
-      <a href="./FailureDictionary/chi.html">ち</a>
-      <a href="./FailureDictionary/tsu.html">つ</a>
-      <a href="./FailureDictionary/te.html">て</a>
-      <a href="./FailureDictionary/to.html">と</a>
-    </li>
-
-    <!-- な行 -->
-    <li class="kana-row">
-      <a href="./FailureDictionary/na.html">な</a>
-      <a href="./FailureDictionary/ni.html">に</a>
-      <a href="./FailureDictionary/nu.html">ぬ</a>
-      <a href="./FailureDictionary/ne.html">ね</a>
-      <a href="./FailureDictionary/no.html">の</a>
-    </li>
-
-    <!-- は行 -->
-    <li class="kana-row">
-      <a href="./FailureDictionary/ha.html">は</a>
-      <a href="./FailureDictionary/hi.html">ひ</a>
-      <a href="./FailureDictionary/fu.html">ふ</a>
-      <a href="./FailureDictionary/he.html">へ</a>
-      <a href="./FailureDictionary/ho.html">ほ</a>
-    </li>
-
-    <!-- ま行 -->
-    <li class="kana-row">
-      <a href="./FailureDictionary/ma.html">ま</a>
-      <a href="./FailureDictionary/mi.html">み</a>
-      <a href="./FailureDictionary/mu.html">む</a>
-      <a href="./FailureDictionary/me.html">め</a>
-      <a href="./FailureDictionary/mo.html">も</a>
-    </li>
-
-    <!-- や行（や・ゆ・よのみ） -->
-    <li class="kana-row">
-      <a href="./FailureDictionary/ya.html">や</a>
-      <a href="./FailureDictionary/yu.html">ゆ</a>
-      <a href="./FailureDictionary/yo.html">よ</a>
-    </li>
-
-    <!-- ら行 -->
-    <li class="kana-row">
-      <a href="./FailureDictionary/ra.html">ら</a>
-      <a href="./FailureDictionary/ri.html">り</a>
-      <a href="./FailureDictionary/ru.html">る</a>
-      <a href="./FailureDictionary/re.html">れ</a>
-      <a href="./FailureDictionary/ro.html">ろ</a>
-    </li>
-
-    <!-- わ行（を・ん含む） -->
-    <li class="kana-row">
-      <a href="./FailureDictionary/wa.html">わ</a>
-      <a href="./FailureDictionary/wo.html">を</a>
-      <a href="./FailureDictionary/n.html">ん</a>
-    </li>
-
-  </ul>
-</section>
-
- <!-- ===================== -->
- <!-- Texts セクション -->
- <!-- ===================== -->
-  <section id="texts" aria-label="Texts list">
-    <h2>Texts</h2>
-
-    <!-- 中身は今までの Texts と同じ -->
-    <ul class="text-list">
-    
-    <li>
-     <a href="./Texts/251226.html" class="work-link">
-      <span>二郎系ラーメンのふしぎ</span>
-      <span class="year">2025</span>
-     </a>
-    </li>
-
-    <li>
-     <a href="./Texts/251231.html" class="work-link">
-      <span>馬のひとみ　そして風のうた</span>
-      <span class="year">2025</span>
-     </a>
-    </li>
-
-    <li>
-     <a href="./Texts/260117.html" class="work-link">
-      <span>書いていないこと</span>
-      <span class="year">2026</span>
-     </a>
-    </li>
-
-    </ul>
-  </section>
-
-
+    <section id="texts" aria-label="Texts list">
+      <h2>Texts</h2>
+      <ul class="entry-list">
+        <li>
+          <a href="./Texts/251226.html" class="entry-link">
+            <span>二郎系ラーメンのふしぎ</span>
+            <span class="year">2025</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Texts/251231.html" class="entry-link">
+            <span>馬のひとみ　そして風のうた</span>
+            <span class="year">2025</span>
+          </a>
+        </li>
+        <li>
+          <a href="./Texts/260117.html" class="entry-link">
+            <span>書いていないこと</span>
+            <span class="year">2026</span>
+          </a>
+        </li>
+      </ul>
+    </section>
   </main>
 </body>
 </html>

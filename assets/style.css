@@ -3,37 +3,67 @@ html{overflow-y:scroll;scrollbar-gutter:stable;}
 html,body{overflow-x:hidden;}
 
 /* ページ全体の基本設定 */
-body{margin:0;font-family:"Yu Gothic","YuGothic","Yu Gothic UI","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;line-height:1.7}
+body{
+  margin:0;
+  font-family:"Yu Gothic","YuGothic","Yu Gothic UI","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+  line-height:1.7;
+}
 
 /* 中央寄せ＋余白（レイアウトの土台）
    - max-width で本文幅を制限
    - margin:0 auto で中央寄せ
    - padding で上下左右に最小限の余白 */
-.wrap{max-width:980px;margin:0 auto;padding:24px 16px}
+.wrap{
+  max-width:980px;
+  margin:0 auto;
+  padding:24px 16px;
+}
 
 /* ヘッダー内を「左:タイトル、右上:ナビ」に分ける
    - display:flex で横並びにする
    - justify-content:space-between で左右に分ける
    - align-items:flex-start で上端を揃え、ナビが右上に来やすくする */
-.site-header .wrap{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.site-header .wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:16px;
+}
 
 /* タイトルの余白を整える（h1のデフォルト余白を消す） */
-.site-title{margin:0;font-size:24px;font-weight:600}
+.site-title{
+  margin:0;
+  font-size:24px;
+  font-weight:600;
+}
 
 /* ナビを横並びにする
    - display:flex でリンクを横に並べる
    - gap で間隔
    - flex-wrap で画面が狭い時に折り返せるようにする */
-.nav{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.nav{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
 
-/* リンクの下線を消す（必要条件）
+/* リンクの下線を消す
    - color:inherit で文字色を本文と揃える */
-.nav a{text-decoration:none;color:inherit;font-weight:600}
-
-
+.nav a{
+  text-decoration:none;
+  color:inherit;
+  font-weight:600;
+}
 
 /* トップのロゴ表示エリア：画面の高さからヘッダー分を引いた高さを最低限確保し、中央に配置する */
-.top-logo{min-height:calc(100vh - 180px);display:flex;align-items:center;justify-content:center;padding:16px}
+.top-logo{
+  min-height:calc(100vh - 180px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px;
+}
 
 /* TOPのロゴ画像：100vw をやめて 100% にする（横ズレの原因を潰す） */
 .top-logo-img{
@@ -44,53 +74,41 @@ body{margin:0;font-family:"Yu Gothic","YuGothic","Yu Gothic UI","Hiragino Kaku G
   display:block;
 }
 
-
-/* 【通常のリンク】青にならず、常に黒で表示する */
+/* 通常リンク */
 a{
-  color:#000;           /* リンク文字の色を黒に固定 */
-  text-decoration:none; /* 下線を消す（下線を残したいならこの1行を削除） */
+  color:#000;
+  text-decoration:none;
 }
 
-/* 【既に見たリンク】紫にならず、灰色で表示する */
+/* 訪問済みリンク */
 a:visited{
-  color:#888;           /* 訪問済みリンクの色を灰色にする */
+  color:#888;
 }
 
-/* 【マウスを乗せた時】色が勝手に変わらないようにする */
+/* ホバー時 */
 a:hover{
-  color:#000;           /* ホバー時も黒のまま */
+  color:#000;
 }
 
-/* 【クリックしている瞬間】一瞬だけ色が変わるのを防ぐ */
+/* クリック中 */
 a:active{
-  color:#000;           /* アクティブ時も黒のまま */
+  color:#000;
 }
 
 /* =========================================
    Failure Dictionary（五十音リンク）用CSS
    ========================================= */
 
-/* 五十音全体のリスト設定
-   ・list-style:none で行頭の「・」を消す
-   ・padding-left:0 で左側の余白を消す
-   ・margin で上下に適度な余白を確保 */
 .kana-list{
   list-style:none;
   padding-left:0;
   margin:16px 0;
 }
 
-/* 五十音の「1行分（あ行・か行など）」の設定
-   ・margin-bottom で行と行の間隔を広げる */
 .kana-row{
   margin:0 0 14px;
 }
 
-/* 各文字（あ・い・う…）そのものの設定
-   ・inline-block にしてクリック領域を安定させる
-   ・font-size で文字を少し大きくする
-   ・font-weight で視認性を上げる
-   ・margin-right で文字同士の間隔を広げる */
 .kana-row a{
   display:inline-block;
   font-size:1.15rem;
@@ -98,32 +116,24 @@ a:active{
   margin-right:16px;
 }
 
-/* 「Failure Dictionary」の下に入れる一行解説文
-   ・margin で見出し・本文との距離を調整
-   ・font-size を少し小さくして主張を抑える
-   ・color を薄いグレーにして説明文らしくする */
 .failure-description{
   margin:8px 0 20px;
   font-size:0.95rem;
   color:#000;
 }
 
-/* Worksページ内の読み物セクション間の間隔を統一する */
+/* 読み物系セクション間の間隔を統一 */
 #texts,
-#failure-dictionary{
+#failure-dictionary,
+#archives-list{
   margin-top:80px;
 }
 
-/* =========================================
-   文中の区切り記号（□）を中央に配置するための共通設定
-   ・詩、本、日記など、サイト全体で共通して使う記号を想定
-   ・HTML側では <span class="mark">□</span> の形で使用する
-   ========================================= */
-
+/* 文中の区切り記号（□）を中央に配置 */
 .mark{
-  display:block;        /* span は本来インライン要素なので、block にして横幅を持たせる */
-  text-align:center;    /* 記号を行の中央に配置する */
-  margin:1.5em 0;       /* 記号の上下に余白をつけ、文章の呼吸を整える */
+  display:block;
+  text-align:center;
+  margin:1.5em 0;
 }
 
 /* ===============================
@@ -148,15 +158,17 @@ a:active{
 
 /* 建築ページの画像まわり */
 .architecture-figure img{
-  display:block;      /* 画像をブロック要素にする（下の余白が安定する） */
-  width:100%;         /* 横幅いっぱいに表示（必要なければ削除可） */
-  margin-bottom:24px; /* 画像と画像の間に24pxの余白をつける */
+  display:block;
+  width:100%;
+  margin-bottom:24px;
 }
 
-/* 作品タイトルと年号を同じ行に並べる
-   ・h1自体を横並びの箱にする
-   ・左にタイトル、右に年号を配置する */
-.work-title{
+/* =========================================
+   Works / Archives 共通タイトル行
+   左にタイトル、右に年号や日付を置く
+   ========================================= */
+
+.entry-title{
   display:flex;
   align-items:baseline;
   justify-content:space-between;
@@ -164,19 +176,11 @@ a:active{
   margin:0 0 32px;
 }
 
-/* タイトル文字のまとまり
-   ・必要以上に縮まないようにする */
-.work-title-text{
+.entry-title-text{
   display:block;
 }
 
-/* 年号の見た目
-   ・margin-left:auto で右端へ押し出す
-   ・font-size を少し小さくして、タイトルとの強弱をつける
-   ・font-weight は親の h1 に合わせる
-   ・color は親の h1 に合わせる
-   ・white-space:nowrap で途中改行を防ぐ */
-.work-year{
+.entry-year{
   margin-left:auto;
   font-size:0.9em;
   font-weight:inherit;
@@ -184,32 +188,54 @@ a:active{
   white-space:nowrap;
 }
 
-/* Works一覧で、左にタイトル・右に年号を並べる */
-/* Works一覧の各行 */
-.text-list li{
+/* =========================================
+   Works / Archives 共通一覧
+   左にタイトル、右に年号を並べる
+   ========================================= */
+
+/* ul の黒丸と左のへこみを消す */
+.entry-list{
+  list-style:none;
+  padding-left:0;
+  margin:16px 0 0;
+}
+
+.entry-list li{
   margin:10px 0;
 }
 
 /* 1行まるごとをリンク化し、左にタイトル・右に年号を置く */
-.text-list .work-link{
+.entry-list .entry-link{
   display:flex;
   justify-content:space-between;
   align-items:baseline;
   gap:1rem;
   text-decoration:none;
-  
-  font-size:1.00rem;
+  font-size:1rem;
   font-weight:600;
 }
-/* .work-link は1行全体のリンクです
-   display:flex; で中のタイトルと年号を横並びにします
-   justify-content:space-between; で左右の端に分けます
-   align-items:baseline; で文字の高さをそろえます
-   gap:1rem; で間に少し余白を入れます
-   color/font-size/font-weight をここでまとめて指定すると
-   タイトルと年号が同じ見た目になります */
 
-.text-list .year{
+/* 年号が途中で改行されないようにする */
+.entry-list .year{
   white-space:nowrap;
 }
-/* 年号が途中で改行されないようにします */
+
+/* =========================================
+   Works / Archives 各セクションの縦間隔
+   ========================================= */
+
+main > section{
+  margin-top:64px;
+}
+
+main > section:first-of-type{
+  margin-top:32px;
+}
+
+main h2{
+  margin:0 0 16px;
+}
+
+main h2 + *{
+  margin-top:0;
+}
