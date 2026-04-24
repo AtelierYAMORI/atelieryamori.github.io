@@ -239,3 +239,44 @@ main h2{
 main h2 + *{
   margin-top:0;
 }
+
+/* 写真一覧を、ヘッダーや本文と同じ幅の中で並べる */
+.photo-grid-full{
+  /* 写真を格子状に並べる */
+  display:grid;
+
+  /* 横に4枚ずつ並べる */
+  grid-template-columns:repeat(4,1fr);
+
+  /* 写真と写真の間隔 */
+  gap:12px;
+
+  /* 写真一覧の上に少し余白をつくる */
+  margin-top:32px;
+}
+
+/* グリッド内の画像設定 */
+.photo-grid-full img{
+  /* 画像を枠いっぱいに広げる */
+  width:100%;
+
+  /* 横5：縦4の比率にする */
+  aspect-ratio:5 / 4;
+
+  /* 枠からはみ出す部分はトリミングする */
+  object-fit:cover;
+
+  /* 画像下に余計な隙間が出ないようにする */
+  display:block;
+}
+
+/* スマホ表示の設定 */
+@media (max-width:700px){
+  .photo-grid-full{
+    /* スマホでは横2枚ずつにする */
+    grid-template-columns:repeat(2,1fr);
+
+    /* スマホでは写真同士の間隔を少し狭くする */
+    gap:6px;
+  }
+}
