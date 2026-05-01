@@ -280,3 +280,17 @@ main h2 + *{
     gap:6px;
   }
 }
+
+/* 年賀状ページの画像サイズ調整
+   - max-width: 画像が大きくなりすぎないように、最大幅を600pxにする
+   - width: 画面が狭いときは、画面幅に合わせて自動で縮む
+   - height: 画像の縦横比を保つ
+   - display:block: 画像をブロック要素にして、余計なすき間を防ぐ
+   - margin:0 auto: 画像を中央寄せにする */
+.nengajo-image{
+  max-width:600px;
+  width:100%;
+  height:auto;
+  display:block;
+  margin:0 auto;
+}
