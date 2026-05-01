@@ -294,3 +294,12 @@ main h2 + *{
   display:block;
   margin:0 auto;
 }
+
+/* 作品ページ・年賀状ページのタイトル
+   - タイトルを左、年号を右端に配置する */
+.work-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:24px;
+}
