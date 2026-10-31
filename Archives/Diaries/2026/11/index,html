@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026 11 | Diaries | Atelier YAMORI</title>
+
+  <!-- 共通CSS（4階層上に戻る） -->
+  <link rel="stylesheet" href="../../../../assets/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+  body{font-family:Arial,"Noto Sans JP",sans-serif}
+  /* 日付（2026.11.1(日) など）だけを太字にする */
+  .timeline-year{font-weight:700}
+  </style>
+  
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <p class="site-title"><a class="brand" href="../../../">Atelier YAMORI</a></p>
+      <nav class="nav" aria-label="Global navigation">
+        <a href="../../../About/">About</a>
+        <a href="../../../Works/">Works</a>
+        <a href="../../">Archives</a>
+        <a href="../../../Favorites/">Favorites</a>
+        <a href="../../../Contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <h1>2026 11</h1>
+    <section class="diary-list" aria-label="Diary entries for 2026-11">
+
+      <span class="timeline-year">2026.11.1(日)</span><br>
+      あああうんちうんち！！
+      <br>
+
+      <span class="timeline-year">2026.11.2(月)</span><br>
+      あああうんちうんち！！
+      <br>
+
+      <span class="timeline-year">2026.11.3(火)</span><br>
+      あああうんちうんち！！
+      <br>
+
+      <span class="timeline-year">2026.11.4(水)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.5(木)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.6(金)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.7(土)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.8(日)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.9(月)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.10(火)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.11(水)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.12(木)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.13(金)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.14(土)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.15(日)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.16(月)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.17(火)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.18(水)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.19(木)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.20(金)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.21(土)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.22(日)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.23(月)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.24(火)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.25(水)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.26(木)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.27(金)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.28(土)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.29(日)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+      <span class="timeline-year">2026.11.30(月)</span><br>
+      あああうんちうんち！！！！
+      <br>
+
+    </section>
+  </main>
+</body>
+</html>
